@@ -1,0 +1,55 @@
+{
+  "name": "永康 TV - 免费在线视频搜索与观看平台",
+  "short_name": "永康TV",
+  "description": "搜索并观看来自多个视频源的内容，无广告、安全，支持多种设备",
+  "start_url": "/index.html?source=pwa",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#1e90ff",
+  "categories": ["entertainment", "video", "streaming"],
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "https://tv.ack20.eu.org/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://tv.ack20.eu.org/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://tv.ack20.eu.org/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "永康TV首页"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "搜索视频",
+      "short_name": "搜索",
+      "description": "直接搜索视频内容",
+      "url": "/index.html?action=search",
+      "icons": [{ "src": "https://tv.ack20.eu.org/logo.png", "sizes": "192x192" }]
+    }
+  ],
+  "iarc_rating_id": "",
+  "related_applications": []
+}

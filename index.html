@@ -14,18 +14,25 @@
     <meta property="og:url" content="https://tv.ack20.eu.org/">
     <meta property="og:title" content="永康 TV - 免费在线视频搜索与观看平台">
     <meta property="og:description" content="搜索并观看来自多个视频源的内容，支持多种设备，无需注册即可使用。">
-    <meta property="og:image" content="https://ack20.eu.org/images/clear/dark.png">
+    <meta property="og:image" content="https://tv.ack20.eu.org/logo.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://tv.ack20.eu.org/">
     <meta property="twitter:title" content="永康 TV - 免费在线视频搜索与观看平台">
     <meta property="twitter:description" content="搜索并观看来自多个视频源的内容，支持多种设备，无需注册即可使用。">
-    <meta property="twitter:image" content="https://ack20.eu.org/images/clear/dark.png">
+    <meta property="twitter:image" content="https://tv.ack20.eu.org/logo.png">
     
     <!-- Favicon -->
-    <link rel="icon" href="https://ack20.eu.org/images/clear/dark.png">
-    <link rel="apple-touch-icon" href="https://ack20.eu.org/images/clear/dark.png">
+    <link rel="icon" href="https://tv.ack20.eu.org/logo.png">
+    <link rel="apple-touch-icon" href="https://tv.ack20.eu.org/logo.png">
+    
+    <!-- PWA 支持 -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e90ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="永康 TV">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://tv.ack20.eu.org/">
@@ -94,7 +101,7 @@
             
             <!-- 添加广告过滤开关 -->
             <div>
-                <div class="flex items-center justify-between">
+                <div class="flex items-center justify之间">
                     <label class="text-sm font-medium text-gray-700">分片广告过滤</label>
                     <div class="relative inline-block w-12 align-middle select-none">
                         <input type="checkbox" id="adFilterToggle" class="opacity-0 absolute w-full h-full cursor-pointer z-10">
@@ -119,7 +126,7 @@
             <!-- 网站标志和口号 -->
             <header class="text-center mb-2">
                 <div class="flex justify-center items-center mb-4">
-                    <img src="https://ack20.eu.org/images/clear/dark.png" alt="永康 TV Logo" class="h-12 mr-2">
+                    <img src="https://tv.ack20.eu.org/logo.png" alt="永康 TV Logo" class="h-12 mr-2">
                     <h1 class="text-5xl font-bold gradient-text">永康 TV</h1>
                 </div>
                 <p class="text-gray-600 mb-8">自由观影，畅享精彩</p>
@@ -169,7 +176,7 @@
             <div class="flex flex-col md:flex-row justify之间 items-center">
                 <div class="mb-4 md:mb-0">
                     <div class="flex items-center justify-center md:justify-start">
-                        <img src="https://ack20.eu.org/images/clear/dark.png" alt="永康 TV Logo" class="h-6 mr-2">
+                        <img src="https://tv.ack20.eu.org/logo.png" alt="永康 TV Logo" class="h-6 mr-2">
                         <span class="gradient-text font-bold">永康 TV</span>
                     </div>
                     <p class="text-gray-600 text-sm mt-2 text-center md:text-left">© 2025 永康 TV - 自由观影，畅享精彩</p>
@@ -236,5 +243,20 @@
     <script src="js/ui.js"></script>
     <script src="js/api.js"></script>
     <script src="js/app.js"></script>
+    
+    <!-- PWA 注册 -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker 注册成功: ', registration.scope);
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker 注册失败: ', err);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>
