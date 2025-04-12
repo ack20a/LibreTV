@@ -7,10 +7,10 @@ const MAX_HISTORY_ITEMS = 5;
 
 // 网站信息配置
 const SITE_CONFIG = {
-    name: 'LibreTV',
-    url: 'https://libretv.is-an.org',
+    name: '永康 TV',
+    url: 'https://tv.ack20.eu.org',
     description: '免费在线视频搜索与观看平台',
-    logo: 'https://images.icon-icons.com/38/PNG/512/retrotv_5520.png',
+    logo: 'https://ack20.eu.org/images/clear/dark.png',
     version: '1.0.0'
 };
 

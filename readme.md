@@ -1,16 +1,14 @@
-# LibreTV - 免费在线视频搜索与观看平台
+# 永康TV - 免费在线视频搜索与观看平台
 
 ## 📺 项目简介
 
-LibreTV是一个轻量级、免费的在线视频搜索与观看平台，提供来自多个视频源的内容搜索与播放服务。无需注册，即开即用，支持多种设备访问。项目采用纯前端技术构建，可轻松部署在各类静态网站托管服务上。
+永康TV是一个轻量级、免费的在线视频搜索与观看平台，提供来自多个视频源的内容搜索与播放服务。无需注册，即开即用，支持多种设备访问。项目采用纯前端技术构建，可轻松部署在各类静态网站托管服务上。
 
 本项目基于 https://github.com/bestK/tv
 
-演示站：https://libretv.is-an.org/
+演示站：https://tv.ack20.eu.org/
 
-<img src="https://testingcf.jsdelivr.net/gh/bestZwei/imgs@master/picgo/image-20250406231222216.png" alt="image-20250406231222216" style="zoom:67%;" />
-
-**感谢 [NodeSupport](https://www.nodeseek.com/post-305185-1) 友情赞助**
+<img src="https://ack20.eu.org/images/clear/dark.png" alt="永康TV" style="zoom:67%;" />
 
 ## ✨ 主要特性
 
@@ -26,7 +24,7 @@ LibreTV是一个轻量级、免费的在线视频搜索与观看平台，提供�
 
 ## ⌨️ 键盘快捷键
 
-LibreTV播放器支持以下键盘快捷键：
+永康TV播放器支持以下键盘快捷键：
 
 - **Alt + 左箭头**：播放上一集
 - **Alt + 右箭头**：播放下一集
@@ -37,7 +35,7 @@ LibreTV播放器支持以下键盘快捷键：
 
 ## 📹 视频源支持说明
 
-LibreTV 默认支持以下几种视频源接口：
+永康TV 默认支持以下几种视频源接口：
 - 黑木耳影视 (heimuer)
 - 非凡影视 (ffzy)
 - 天涯资源 (tyyszy)
@@ -138,7 +136,7 @@ services:
 ## 🌟 项目结构
 
 ```
-LibreTV/
+永康TV/
 ├── css/
 │   └── styles.css       // 自定义样式
 ├── js/
@@ -152,16 +150,9 @@ LibreTV/
 └── sitemap.xml          // 站点地图
 ```
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=bestZwei/LibreTV&type=Date)](https://www.star-history.com/#bestZwei/LibreTV&Date)
-
-## ⚠️ 免责声明
-
-LibreTV 仅作为视频搜索工具，不存储、上传或分发任何视频内容。所有视频均来自第三方API接口提供的搜索结果。如有侵权内容，请联系相应的内容提供方。
-
 ## 🔄 更新日志
 
 - 1.0.0 (2025-04-06): 初始版本发布
 - 1.0.1 (2025-04-07): 添加广告过滤功能，优化播放器性能
 - 1.0.2 (2025-04-08): 分离了播放页面，优化视频源API兼容性
+- 1.0.3 (2025-04-12): 更名为永康TV，更新Logo，优化用户界面

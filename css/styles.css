@@ -1,31 +1,32 @@
 :root {
-    /* 赛博影视主题配色方案 - 柔和版 */
-    --primary-color: #00ccff;       /* 霓虹蓝主色调 */
-    --primary-light: #33d6ff;       /* 浅霓虹蓝变体 */
-    --secondary-color: #0f1622;     /* 深蓝黑背景色 */
-    --accent-color: #ff3c78;        /* 霓虹粉强调色 */
-    --text-color: #e6f2ff;          /* 柔和的蓝白色文本 */
-    --text-muted: #8599b2;          /* 淡蓝灰色次级文本 */
-    --border-color: rgba(0, 204, 255, 0.15);
-    --page-gradient-start: #0f1622; /* 深蓝黑起始色 */
-    --page-gradient-end: #192231;   /* 深靛蓝结束色 */
-    --card-gradient-start: #121b29; /* 卡片起始色 */
-    --card-gradient-end: #1c2939;   /* 卡片结束色 */
-    --card-accent: rgba(0, 204, 255, 0.12); /* 霓虹蓝卡片强调色 */
-    --card-hover-border: rgba(0, 204, 255, 0.5); /* 悬停边框颜色 */
+    /* 永康TV亮色主题配色方案 */
+    --primary-color: #1e90ff;      /* 明亮的蓝色主色调 */
+    --primary-light: #4dabff;      /* 浅蓝色变体 */
+    --secondary-color: #f8f9fa;    /* 浅灰色背景色 */
+    --accent-color: #ff3c78;       /* 粉色强调色 */
+    --text-color: #212529;         /* 深色文本 */
+    --text-muted: #6c757d;         /* 灰色次级文本 */
+    --border-color: rgba(30, 144, 255, 0.15);
+    --page-gradient-start: #ffffff; /* 白色起始色 */
+    --page-gradient-end: #f8f9fa;   /* 浅灰色结束色 */
+    --card-gradient-start: #ffffff; /* 卡片起始色 */
+    --card-gradient-end: #f6f8fa;   /* 卡片结束色 */
+    --card-accent: rgba(30, 144, 255, 0.12); /* 蓝色卡片强调色 */
+    --card-hover-border: rgba(30, 144, 255, 0.5); /* 悬停边框颜色 */
 }
 
 .page-bg {
     background: linear-gradient(180deg, var(--page-gradient-start), var(--page-gradient-end));
     min-height: 100vh;
-    /* 柔和赛博点状背景 */
+    /* 柔和点状背景 */
     background-image: 
         linear-gradient(180deg, var(--page-gradient-start), var(--page-gradient-end)),
-        radial-gradient(circle at 25px 25px, rgba(0, 204, 255, 0.04) 2px, transparent 3px),
+        radial-gradient(circle at 25px 25px, rgba(30, 144, 255, 0.04) 2px, transparent 3px),
         radial-gradient(circle at 75px 75px, rgba(255, 60, 120, 0.02) 1px, transparent 2px),
-        radial-gradient(circle at 50px 50px, rgba(150, 255, 250, 0.015) 1px, transparent 2px);
+        radial-gradient(circle at 50px 50px, rgba(150, 150, 250, 0.015) 1px, transparent 2px);
     background-blend-mode: normal;
     background-size: cover, 100px 100px, 50px 50px, 75px 75px;
+    color: var(--text-color);
 }
 
 button, .card-hover {
@@ -35,10 +36,11 @@ button, .card-hover {
 .card-hover {
     border: 1px solid var(--border-color);
     background: linear-gradient(135deg, var(--card-gradient-start), var(--card-gradient-end));
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
     border-radius: 6px;
+    color: var(--text-color);
 }
 
 .card-hover::before {
@@ -55,7 +57,7 @@ button, .card-hover {
 .card-hover:hover {
     border-color: var(--card-hover-border);
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card-hover:hover::before {
@@ -71,8 +73,9 @@ button, .card-hover {
 .settings-panel {
     transform: translateX(100%);
     transition: transform 0.3s ease;
-    background: linear-gradient(135deg, var(--page-gradient-end), var(--page-gradient-start));
-    border-left: 1px solid var(--primary-color);
+    background: linear-gradient(135deg, #ffffff, #f0f2f5);
+    border-left: 1px solid var(--border-color);
+    color: var(--text-color);
 }
 
 .settings-panel.show {
@@ -81,7 +84,7 @@ button, .card-hover {
 
 .search-button {
     background: var(--primary-color);
-    color: var(--text-color);
+    color: #ffffff;
 }
 
 .search-button:hover {
@@ -94,23 +97,23 @@ button, .card-hover {
 }
 
 ::-webkit-scrollbar-track {
-    background: #111;
+    background: #f0f0f0;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #333;
+    background: #ccc;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #444;
+    background: #aaa;
 }
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: #333 #111;
+    scrollbar-color: #ccc #f0f0f0;
 }
 
 .search-tag {
@@ -120,7 +123,7 @@ button, .card-hover {
     border-radius: 0.5rem;
     font-size: 0.875rem;
     border: 1px solid var(--border-color);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .search-tag:hover {
@@ -138,16 +141,103 @@ button, .card-hover {
 
 .footer a:hover {
     text-decoration: underline;
+    color: var(--primary-color);
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: var(--text-color);
 }
 
 .container {
     flex: 1;
+}
+
+/* 修改元素颜色适应亮色主题 */
+#settingsPanel {
+    background: #ffffff;
+    border-left: 1px solid #e0e0e0;
+    color: var(--text-color);
+}
+
+#searchInput {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    color: var(--text-color);
+}
+
+button[onclick="search()"] {
+    background: var(--primary-color);
+    color: white;
+}
+
+button[onclick="search()"]:hover {
+    background: var(--primary-light);
+}
+
+footer {
+    background: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* 设置面板样式调整 */
+#settingsPanel select, #settingsPanel input {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    color: var(--text-color);
+}
+
+/* 模态框样式调整 */
+#modal > div {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    color: var(--text-color);
+}
+
+#modalContent button {
+    background: rgba(30, 144, 255, 0.08);
+    border: 1px solid rgba(30, 144, 255, 0.2);
+    color: var(--text-color);
+}
+
+#modalContent button:hover {
+    background: rgba(30, 144, 255, 0.15);
+    border-color: var(--primary-color);
+}
+
+/* 开关按钮样式 */
+.toggle-bg {
+    background-color: #e0e0e0;
+}
+
+#yellowFilterToggle:checked + .toggle-bg,
+#adFilterToggle:checked + .toggle-bg {
+    background-color: var(--primary-color);
+}
+
+.toggle-dot {
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#yellowFilterToggle:checked ~ .toggle-dot {
+    transform: translateX(1.5rem);
+    box-shadow: 0 2px 4px rgba(30, 144, 255, 0.3);
+}
+
+#adFilterToggle:checked ~ .toggle-dot {
+    transform: translateX(1.5rem);
+    box-shadow: 0 2px 4px rgba(30, 144, 255, 0.3);
+}
+
+#yellowFilterToggle:focus + .toggle-bg,
+#yellowFilterToggle:hover + .toggle-bg,
+#adFilterToggle:focus + .toggle-bg,
+#adFilterToggle:hover + .toggle-bg {
+    box-shadow: 0 0 0 2px rgba(30, 144, 255, 0.3);
 }
 
 @media screen and (min-height: 800px) {
@@ -155,6 +245,7 @@ body {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        color: var(--text-color);
     }
     
     .container {
@@ -190,65 +281,14 @@ body {
     animation: fadeOut 0.3s forwards;
 }
 
-#modal > div {
-    background: linear-gradient(135deg, var(--card-gradient-start), var(--card-gradient-end));
-    border: 1px solid var(--primary-color);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 204, 255, 0.1);
-    border-radius: 8px;
+/* 新增的加载框样式调整 */
+#loading > div {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    color: var(--text-color);
 }
 
-#modalContent button {
-    background: rgba(0, 204, 255, 0.08);
-    border: 1px solid rgba(0, 204, 255, 0.2);
-    transition: all 0.2s ease;
-}
-
-#modalContent button:hover {
-    background: rgba(0, 204, 255, 0.15);
+#loading .animate-spin {
     border-color: var(--primary-color);
-    box-shadow: 0 0 8px rgba(0, 204, 255, 0.3);
-}
-
-#yellowFilterToggle:checked + .toggle-bg {
-    background-color: var(--primary-color);
-}
-
-#yellowFilterToggle:checked ~ .toggle-dot {
-    transform: translateX(1.5rem);
-}
-
-#yellowFilterToggle:focus + .toggle-bg,
-#yellowFilterToggle:hover + .toggle-bg {
-    box-shadow: 0 0 0 2px rgba(0, 204, 255, 0.3);
-}
-
-/* 添加广告过滤开关的CSS */
-#adFilterToggle:checked + .toggle-bg {
-    background-color: var(--primary-color);
-}
-
-#adFilterToggle:checked ~ .toggle-dot {
-    transform: translateX(1.5rem);
-}
-
-#adFilterToggle:focus + .toggle-bg,
-#adFilterToggle:hover + .toggle-bg {
-    box-shadow: 0 0 0 2px rgba(0, 204, 255, 0.3);
-}
-
-.toggle-dot {
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.toggle-bg {
-    transition: background-color 0.3s ease-in-out;
-}
-
-#yellowFilterToggle:checked ~ .toggle-dot {
-    box-shadow: 0 2px 4px rgba(0, 204, 255, 0.3);
-}
-
-#adFilterToggle:checked ~ .toggle-dot {
-    box-shadow: 0 2px 4px rgba(0, 204, 255, 0.3);
+    border-top-color: transparent;
 }
