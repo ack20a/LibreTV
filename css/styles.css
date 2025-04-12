@@ -141,6 +141,7 @@ button[onclick="search()"]:hover {
 }
 
 body {
+    margin: 0; /* 重置默认外边距，修正布局异状及顶部红点 */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -407,4 +408,9 @@ header, #searchArea, #resultsArea, .footer {
 
 header {
     margin-top: 0; /* header 通常不需要上边距 */
+}
+
+/* 将“接口”名称文字调成白色 */
+.interface-label {
+    color: white;
 }
